@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import logo from './logo.svg'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import FormComponent from './components/Form';
+import Navigation from './layaouts/Navigation';
+
 import './App.css';
+import { Col, Row } from 'react-bootstrap';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navigation />
+      <div className="containerFormImage">
+        <Row>
+          <Col>
+            <FormComponent />
+          </Col>
+          <Col>
+           <img src={logo} className="App-logo" alt="logo" />
+          </Col>
+        </Row>
+      </div>
     </div>
   );
 }
